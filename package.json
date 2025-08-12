@@ -1,0 +1,43 @@
+{
+  "name": "orderchaos-contracts",
+  "version": "1.0.0",
+  "description": "OrderNChaos Protocol Contracts",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:local": "hardhat run scripts/deploy.js --network hardhat",
+    "deploy:fuji": "hardhat run scripts/deploy.js --network fuji",
+    "deploy:avalanche": "hardhat run scripts/deploy.js --network avalanche",
+    "verify": "hardhat run scripts/verify.js",
+    "verify:fuji": "hardhat run scripts/verify.js --network fuji",
+    "verify:avalanche": "hardhat run scripts/verify.js --network avalanche",
+    "download": "node scripts/download-new.js",
+    "download:old": "node download.js",
+    "download:js": "node download.js -m js",
+    "download:foundry": "node download.js -m foundry",
+    "download:manual": "node download.js -m manual",
+    "download:all": "node download.js -m all",
+    "compile:js": "node download.js -m js && npx hardhat compile --config hardhat.config.js",
+    "compile:foundry": "node download.js -m foundry && npx hardhat compile --config hardhat.config.js",
+    "compile:all": "node download.js -m all"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.12",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "@openzeppelin/contracts": "^4.8.0",
+    "@openzeppelin/contracts-upgradeable": "^4.9.6",
+    "@openzeppelin/hardhat-upgrades": "^1.28.0",
+    "axios": "^1.9.0",
+    "chai": "^4.5.0",
+    "dotenv": "^16.5.0",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.24.2"
+  }
+}
